@@ -21,7 +21,7 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: ${{variables.NODE_VERSION}}
+          node-version: ${{vars.NODE_VERSION}}
 
       # Install dependencies and build the site
       - name: Install Dependencies
