@@ -60,12 +60,12 @@ const Contact = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
           {/* Contact Info & Image */}
           <div className="space-y-8">
-            <div className="relative h-96 rounded-2xl overflow-hidden shadow-xl">
+            <div className="relative h-96 rounded-2xl overflow-hidden shadow-xl bg-gradient-to-b from-gray-100 to-gray-200 flex items-center justify-center">
               <Image
                 src="/images/footer-hero-gaze.png"
                 alt="Contact"
                 fill
-                className="object-cover"
+                className="object-contain"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-primary/70 to-transparent" />
             </div>
