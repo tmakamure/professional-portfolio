@@ -10,6 +10,12 @@ import {
   SiKubernetes,
   SiTerraform,
   SiTensorflow,
+  SiMicrosoftazure,
+  SiCsharp,
+  SiJavascript,
+  SiPowerbi,
+  SiPostgresql,
+  SiMicrosoftfabric,
 } from "react-icons/si";
 
 const Skills = () => {
@@ -101,15 +107,18 @@ const Skills = () => {
   ];
 
   const technologies = [
-    { name: "AWS", icon: <FaAws size={30} /> },
-    { name: "Azure", icon: <FaMicrosoft size={30} /> },
-    { name: "Python", icon: <FaPython size={30} /> },
-    { name: "C#", icon: <FaDatabase size={30} /> },
-    { name: "React", icon: <FaReact size={30} /> },
-    { name: "JavaScript", icon: <FaReact size={30} /> },
-    { name: "Kubernetes", icon: <SiKubernetes size={30} /> },
-    { name: "Docker", icon: <FaDocker size={30} /> },
-    { name: "Terraform", icon: <SiTerraform size={30} /> },
+    { name: "AWS", icon: <FaAws size={40} />, color: "text-orange-500" },
+    { name: "Azure", icon: <SiMicrosoftazure size={40} />, color: "text-blue-600" },
+    { name: "C#", icon: <SiCsharp size={40} />, color: "text-purple-600" },
+    { name: "JavaScript", icon: <SiJavascript size={40} />, color: "text-yellow-500" },
+    { name: "Python", icon: <FaPython size={40} />, color: "text-blue-500" },
+    { name: "React", icon: <FaReact size={40} />, color: "text-cyan-500" },
+    { name: "Kubernetes", icon: <SiKubernetes size={40} />, color: "text-blue-600" },
+    { name: "Docker", icon: <FaDocker size={40} />, color: "text-blue-400" },
+    { name: "Terraform", icon: <SiTerraform size={40} />, color: "text-purple-500" },
+    { name: "Power BI", icon: <SiPowerbi size={40} />, color: "text-yellow-600" },
+    { name: "SQL", icon: <SiPostgresql size={40} />, color: "text-blue-700" },
+    { name: "Microsoft Fabric", icon: <SiMicrosoftfabric size={40} />, color: "text-purple-700" },
   ];
 
   return (
@@ -156,20 +165,25 @@ const Skills = () => {
         </div>
 
         {/* Technology Stack */}
-        <div className="bg-white rounded-xl shadow-lg p-8">
-          <h4 className="text-2xl font-bold text-primary text-center mb-8">
+        <div className="bg-gradient-to-br from-white to-gray-50 rounded-2xl shadow-2xl p-12 border border-gray-100">
+          <h4 className="text-3xl font-bold text-primary text-center mb-2">
             Core Technologies
           </h4>
-          <div className="flex flex-wrap justify-center gap-8">
+          <p className="text-center text-gray-600 mb-12">
+            Modern tools and platforms powering our solutions
+          </p>
+          <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-6 gap-6">
             {technologies.map((tech, index) => (
               <div
                 key={index}
                 className="flex flex-col items-center group cursor-pointer"
               >
-                <div className="text-gray-600 group-hover:text-accent transition-colors duration-300">
-                  {tech.icon}
+                <div className="relative w-20 h-20 flex items-center justify-center mb-3 rounded-xl bg-gradient-to-br from-gray-100 to-gray-50 border border-gray-200 group-hover:border-accent/30 group-hover:shadow-lg group-hover:shadow-accent/10 transition-all duration-300 transform group-hover:scale-110 group-hover:-translate-y-1">
+                  <div className={`${tech.color} transition-colors duration-300 group-hover:brightness-110`}>
+                    {tech.icon}
+                  </div>
                 </div>
-                <span className="text-sm text-gray-600 mt-2 font-medium">
+                <span className="text-xs font-semibold text-gray-700 text-center group-hover:text-accent transition-colors duration-300 h-10 flex items-center">
                   {tech.name}
                 </span>
               </div>
