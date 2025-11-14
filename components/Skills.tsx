@@ -10,12 +10,11 @@ import {
   SiKubernetes,
   SiTerraform,
   SiTensorflow,
-  SiMicrosoftazure,
-  SiCsharp,
+  SiDotnet,
   SiJavascript,
-  SiPowerbi,
+  SiPowers,
   SiPostgresql,
-  SiMicrosoftfabric,
+  SiDatabricks,
 } from "react-icons/si";
 
 const Skills = () => {
@@ -108,17 +107,17 @@ const Skills = () => {
 
   const technologies = [
     { name: "AWS", icon: <FaAws size={40} />, color: "text-orange-500" },
-    { name: "Azure", icon: <SiMicrosoftazure size={40} />, color: "text-blue-600" },
-    { name: "C#", icon: <SiCsharp size={40} />, color: "text-purple-600" },
+    { name: "Azure", icon: <FaMicrosoft size={40} />, color: "text-blue-600" },
+    { name: "C#", icon: <SiDotnet size={40} />, color: "text-purple-600" },
     { name: "JavaScript", icon: <SiJavascript size={40} />, color: "text-yellow-500" },
     { name: "Python", icon: <FaPython size={40} />, color: "text-blue-500" },
     { name: "React", icon: <FaReact size={40} />, color: "text-cyan-500" },
     { name: "Kubernetes", icon: <SiKubernetes size={40} />, color: "text-blue-600" },
     { name: "Docker", icon: <FaDocker size={40} />, color: "text-blue-400" },
     { name: "Terraform", icon: <SiTerraform size={40} />, color: "text-purple-500" },
-    { name: "Power BI", icon: <SiPowerbi size={40} />, color: "text-yellow-600" },
+    { name: "Power BI", icon: <SiPowers size={40} />, color: "text-yellow-600" },
     { name: "SQL", icon: <SiPostgresql size={40} />, color: "text-blue-700" },
-    { name: "Microsoft Fabric", icon: <SiMicrosoftfabric size={40} />, color: "text-purple-700" },
+    { name: "Microsoft Fabric", icon: <SiDatabricks size={40} />, color: "text-purple-700" },
   ];
 
   return (
